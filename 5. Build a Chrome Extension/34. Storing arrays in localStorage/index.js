@@ -1,6 +1,9 @@
-let myLeads = ["www.awesomelead.com"]
+let myLeads = `["www.awesomelead.com"]`
 
-
+myLeads = JSON.parse(myLeads)
+myLeads.push("wwww.toplead.com")
+myLeads = JSON.stringify(myLeads)
+console.log(typeof myLeads)
 
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
@@ -23,5 +26,5 @@ function renderLeads() {
             </li>
         `
     }
-    ulEl.innerHTML = listItems  
+    ulEl.innerHTML = listItems
 }

@@ -9,5 +9,16 @@
 
 // Use both a for loop and a template string to solve the challenge
 function generateSentence(desc, arr) {
-    
+    let arrContent = ""
+    let sep = ", "
+    for (let i = 0; i < arr.length; i++) {
+        if (i == (arr.length - 2)){
+            sep = ' and '
+        }
+        else if (i == (arr.length - 1)){
+            sep = '.'
+        }
+        arrContent += arr[i] + sep
+    }
+    console.log(`The ${arr.length} ${desc} are ${arrContent}`)
 }
